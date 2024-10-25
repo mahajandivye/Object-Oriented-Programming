@@ -12,7 +12,7 @@ class CWH
             title = s;
             rating = r;
         }
-        virtual void display(){}
+        virtual void display(){cout << "bogus code" <<endl;}
 
 };
 
@@ -24,12 +24,12 @@ class CWHText: public CWH
         {
             words = wc;
         }
-        void display()
-        {
-            cout << "this is an amazing text tutorial with title " << title <<endl;
-            cout << "Ratings of this text tutorial is "<< rating << "out of 5 stars " << endl;
-            cout << "No. of words in this text ttorial is "  << words <<endl;
-        }
+        // void display()
+        // {
+        //     cout << "this is an amazing text tutorial with title " << title <<endl;
+        //     cout << "Ratings of this text tutorial is "<< rating << "out of 5 stars " << endl;
+        //     cout << "No. of words in this text ttorial is "  << words <<endl;
+        // }
 
 };
 
@@ -73,3 +73,11 @@ int main()
     tuts[0]->display();
     tuts[1]->display();
 }
+
+//  Rules for virtual functions
+
+// 1. They cannot be static
+// 2. They are accessed by object pointers
+// 3. Virtual functions can be a friend of aother class
+// 4. A virtual function in a base class might not be used
+// 5. If a virtual function is defined in the base, there is no necessity of redefining it in the derived class
